@@ -153,10 +153,10 @@ function validateInputText() {
     const msg = input.previousElementSibling
     if (!input.value) {
       msg.classList.remove('hidden')
-      input.style.outline = '0.5px solid red'
+      input.style.border = '1px solid red'
     } else {
       msg.classList.add('hidden')
-      input.style.outline = '0.5px solid hsl(229, 24%, 87%)'
+      input.style.borderColor = 'hsl(229, 24%, 87%)'
     }
   })
 }

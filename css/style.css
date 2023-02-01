@@ -150,16 +150,18 @@ button {
 }
 
 .input-group input {
+  border-radius: 10px;
   border: 1px solid var(--light-gray);
   height: 50px;
   margin: 10px 0 30px 0;
   padding-left: 20px;
   font-size: 16px;
   font-weight: 500;
+  outline: none;
 }
 
 .input-group input:focus {
-  outline: 1px solid var(--purplish-blue);
+  border: 1px solid var(--purplish-blue);
 }
 
 /* Step 2 */
@@ -174,6 +176,7 @@ button {
   height: fit-content;
   width: 100%;
   border: 1px solid var(--light-gray);
+  outline: none;
   border-radius: 10px;
   padding: 15px;
   cursor: pointer;
@@ -265,6 +268,7 @@ button {
   border-radius: 10px;
   padding: 20px;
   border: 1px solid var(--light-gray);
+  outline: none;
 }
 
 .add-service:hover {
@@ -295,11 +299,13 @@ button {
   width: 20px;
   background: #fff;
   border: 1px solid var(--light-gray);
+  outline: none;
   border-radius: 4px;
 }
 
 .checkbox input:checked ~ .checkmark {
   background-color: var(--purplish-blue);
+  border: none;
 }
 
 .checkmark:after {
@@ -444,7 +450,7 @@ button {
 }
 
 .selected {
-  outline: 1px solid var(--purplish-blue);
+  border: 1px solid var(--purplish-blue);
   background: var(--magnolia);
 }
 
