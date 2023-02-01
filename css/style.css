@@ -150,7 +150,6 @@ button {
 }
 
 .input-group input {
-  border-radius: 10px;
   border: 1px solid var(--light-gray);
   height: 50px;
   margin: 10px 0 30px 0;
