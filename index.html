@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Multi-step form</title>
+</head>
+<body>
+  <!-- Main Container -->
+  <main>
+    <div class="container">
+      <div class="multi-step-card">
+        <!-- Sidebar -->
+        <div class="tab-status">
+          <div class="step">
+            <span class="tab current-tab">1</span>
+            <div class="step-text">
+              <p>Step 1</p>
+              <h2>Your Info</h2>
+            </div>
+          </div>
+          <div class="step">
+            <span class="tab">2</span>
+            <div class="step-text">
+              <p>Step 2</p>
+              <h2>Select plan</h2>
+            </div>
+          </div>
+  
+          <div class="step">
+            <span class="tab">3</span>
+            <div class="step-text">
+              <p>Step 3</p>
+              <h2>Add-ons</h2>
+            </div>
+          </div>
+  
+          <div class="step">
+            <span class="tab">4</span>
+            <div class="step-text">
+              <p>Step 4</p>
+              <h2>Summary</h2>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Step Form -->
+        <form action="#" class="step-form" autocomplete="off">
+          <div class="tab-list">
+            <!-- Step 1 -->
+            <div class="tabpanel">
+              <h1>Personal info</h1>
+              <p class="form-info">Please provide your name, email address, and phone number.</p>
+              <div class="input-group">
+                <label for="name">Name</label>
+                <span class="hidden" data-name-error>This field is required</span>
+                <input class="text-input" name="name" type="text" placeholder="e.g Stephen King">
+              </div>
+              <div class="input-group">
+                <label for="email">Email Address</label>
+                <span class="hidden" data-email-error>This field is required</span>
+                <input class="text-input" name="email" type="text" placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <span class="hidden" data-phone-error>This field is required</span>
+                <input class="text-input" name="phone" type="text" placeholder="e.g. +1 234 567 890">
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="tabpanel hidden">
+              <h1>Select your plan</h1>
+              <p class="form-info">You have the option of monthly or yearly billing.</p>
+              <div class="plan-options">
+                <div class="plan selected">
+                  <img src="images/icon-arcade.svg" alt="">
+                  <div>
+                    <b class="title-p">Arcade</b>
+                    <span class="offer-p plan-priced">$9/mo</span>
+                  </div>
+                </div>
+                <div class="plan" data-advanced-title="">
+                  <img src="images/icon-advanced.svg" alt="">
+                  <div>
+                    <b class="title-p">Advanced</b>
+                    <span class="offer-p plan-priced">$12/mo</span>
+                  </div>
+                </div>
+                <div class="plan">
+                  <img src="images/icon-pro.svg" alt="">
+                  <div>
+                    <b class="title-p">Pro</b>
+                    <span class="offer-p plan-priced">$15/mo</span>
+                  </div>
+                </div>
+              </div>
+              <div class="toggle-type">
+                <p class="monthly toggle-active">Monthly</p>
+                <div class="toggle">
+                  <input type="checkbox" id="toggle"/>
+                  <label for="toggle"></label>
+                </div>
+                <p class="yearly">Yearly</p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="tabpanel hidden">
+              <h1>Pick add-ons</h1>
+              <p class="form-info">Add-ons help enhance your gaming experience.</p>
+              <div class="add-service" data-id="1">
+                <div class="service-offer">
+                  <label class="checkbox">
+                    <input type="checkbox" class="checkbox-input">
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="add-info">
+                    <label class="title-p addon-name">Online service</label>
+                    <p class="offer-p">Access to multiplayer games</p>
+                  </div>
+                </div>
+                <p class="price-p addon-priced">+$1/mo</p>
+              </div>
+              <div class="add-service" data-id="2">
+                <div class="service-offer">
+                  <label class="checkbox">
+                    <input type="checkbox" class="checkbox-input">
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="add-info">
+                    <label class="title-p addon-name">Larger storage</label>
+                    <p class="offer-p">Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p class="price-p addon-priced">+$2/mo</p>
+              </div>
+              <div class="add-service" data-id="3">
+                <div class="service-offer">
+                  <label class="checkbox">
+                    <input type="checkbox" class="checkbox-input">
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="add-info">
+                    <label class="title-p addon-name">Customizable Profile</label>
+                    <p class="offer-p">Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p class="price-p addon-priced">+$2/mo</p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="tabpanel hidden">
+              <h1>Finishing up</h1>
+              <p class="form-info">Double-check everything looks OK before confirming.</p>
+              <div class="items-selected">
+                <div class="subscription-plan">
+                  <p class="title-p plan-name">Arcade (Monthly)</p>
+                  <p class="title-p plan-price">$9/mo</p>
+                </div> 
+                <div class="addons">
+                  <template>
+                    <div class="selected-addon">
+                      <p class="offer-p service-name">Online service</p>
+                      <span class="service-price">+$1/mo</span>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <p class="total"><span>Total (per month)</span> <b>+12/mo</b></p>
+            </div>
+            <!-- Step 5 -->
+            <div class="tabpanel thanks-panel hidden">
+              <img src="images/icon-thank-you.svg" alt="">
+              <h2>Thank you!</h2>
+              <p class="offer-p">Thanks for confirming your subscription! We hope you have fun 
+                using our platform. If you ever need support, please feel free 
+                to email us at support@loremgaming.com.</p>
+            </div>
+          </div>
+
+          <!-- Prev & Next Buttons -->
+          <div class="btn-container">
+            <button class="btn-prev invisible">Go Back</button>
+            <button class="btn-next">Next Step</button>
+            <button class="btn-submit hidden">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
